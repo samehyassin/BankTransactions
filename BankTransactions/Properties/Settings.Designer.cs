@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BankTransaction.Properties
+namespace BankTransactions.Properties
 {
 
 

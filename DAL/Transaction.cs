@@ -42,11 +42,15 @@ namespace DAL
         [MaxLength(300)]
         public string Note { get; set; }
 
-        [ForeignKey("EmpId")]
+        [ForeignKey("Employee")]
         public int EmpId { get; set; }
+        
+        public Employee Employee { get; set; }
 
-        [ForeignKey("CustId")]
+        [ForeignKey("Customer")]
         public int CustId { get; set; }
+
+        public Customer Customer { get; set; }
 
     }
 }

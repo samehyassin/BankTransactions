@@ -1,4 +1,4 @@
-﻿namespace BankTransaction
+﻿namespace BankTransactions
 {
     partial class Form1
     {

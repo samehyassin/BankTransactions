@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DAL
 {
-    class Customer
+     public class Customer
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -31,5 +31,6 @@ namespace DAL
         public string Address { get; set; }
 
         public int TaxFileNumber { get; set; }
+
     }
 }
