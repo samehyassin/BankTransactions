@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankTransactions", "BankTra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{05B48302-110D-4790-B91A-FD99815314B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankTransaction", "BankTransaction\BankTransaction.csproj", "{1731E646-3A99-49CC-8301-DA658841787D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{05B48302-110D-4790-B91A-FD99815314B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05B48302-110D-4790-B91A-FD99815314B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05B48302-110D-4790-B91A-FD99815314B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1731E646-3A99-49CC-8301-DA658841787D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1731E646-3A99-49CC-8301-DA658841787D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1731E646-3A99-49CC-8301-DA658841787D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1731E646-3A99-49CC-8301-DA658841787D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
