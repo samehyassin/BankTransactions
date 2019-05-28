@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BankTransactions
+namespace BankTransactions.Forms
 {
-    public partial class Form1 : Form
+    public partial class frmDebtForm : Form
     {
-        public Form1()
+        public frmDebtForm()
         {
             InitializeComponent();
         }
