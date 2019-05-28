@@ -16,12 +16,5 @@ namespace BankTransactions.Forms
         {
             InitializeComponent();
         }
-
-       
-
-        private void frmDebtForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -32,7 +32,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnWithdrawal = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnDebt
@@ -46,7 +45,6 @@
             this.btnDebt.TabIndex = 0;
             this.btnDebt.Text = "Debt";
             this.btnDebt.UseVisualStyleBackColor = false;
-            this.btnDebt.Click += new System.EventHandler(this.btnDebt_Click);
             // 
             // button2
             // 
@@ -81,24 +79,12 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(141, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(333, 42);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Bank Tansactions";
-            // 
             // frmEntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(596, 410);
             this.ControlBox = false;
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnWithdrawal);
             this.Controls.Add(this.button2);
@@ -107,7 +93,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Entry Form";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -117,7 +102,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnWithdrawal;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Label label1;
     }
 }
 

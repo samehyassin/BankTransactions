@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.Entity;
 
 namespace BankTransactions
 {
@@ -20,12 +19,7 @@ namespace BankTransactions
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-        }
 
-        private void btnDebt_Click(object sender, EventArgs e)
-        {
-           
         }
     }
 }
