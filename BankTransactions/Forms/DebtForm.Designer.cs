@@ -57,10 +57,10 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.textBox11 = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.btnDbtSave = new System.Windows.Forms.Button();
+            this.btnDbtUpdate = new System.Windows.Forms.Button();
+            this.btnDbtDelete = new System.Windows.Forms.Button();
+            this.btnDbtClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -68,7 +68,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(444, 40);
+            this.label1.Location = new System.Drawing.Point(496, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 46);
@@ -236,7 +236,7 @@
             this.textBox1.Location = new System.Drawing.Point(309, 190);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(256, 26);
+            this.textBox1.Size = new System.Drawing.Size(219, 26);
             this.textBox1.TabIndex = 15;
             // 
             // textBox2
@@ -245,7 +245,7 @@
             this.textBox2.Location = new System.Drawing.Point(309, 236);
             this.textBox2.Margin = new System.Windows.Forms.Padding(5);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(256, 26);
+            this.textBox2.Size = new System.Drawing.Size(219, 26);
             this.textBox2.TabIndex = 16;
             // 
             // textBox3
@@ -254,7 +254,7 @@
             this.textBox3.Location = new System.Drawing.Point(309, 282);
             this.textBox3.Margin = new System.Windows.Forms.Padding(5);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(256, 26);
+            this.textBox3.Size = new System.Drawing.Size(219, 26);
             this.textBox3.TabIndex = 17;
             // 
             // textBox4
@@ -263,7 +263,7 @@
             this.textBox4.Location = new System.Drawing.Point(309, 328);
             this.textBox4.Margin = new System.Windows.Forms.Padding(5);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(256, 26);
+            this.textBox4.Size = new System.Drawing.Size(219, 26);
             this.textBox4.TabIndex = 18;
             // 
             // textBox5
@@ -272,7 +272,7 @@
             this.textBox5.Location = new System.Drawing.Point(309, 374);
             this.textBox5.Margin = new System.Windows.Forms.Padding(5);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(256, 26);
+            this.textBox5.Size = new System.Drawing.Size(219, 26);
             this.textBox5.TabIndex = 19;
             // 
             // textBox6
@@ -281,7 +281,7 @@
             this.textBox6.Location = new System.Drawing.Point(309, 420);
             this.textBox6.Margin = new System.Windows.Forms.Padding(5);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(256, 26);
+            this.textBox6.Size = new System.Drawing.Size(219, 26);
             this.textBox6.TabIndex = 20;
             // 
             // dateTimePicker1
@@ -290,7 +290,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(309, 144);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(5);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(256, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(219, 26);
             this.dateTimePicker1.TabIndex = 21;
             // 
             // textBox7
@@ -299,7 +299,7 @@
             this.textBox7.Location = new System.Drawing.Point(874, 146);
             this.textBox7.Margin = new System.Windows.Forms.Padding(5);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(256, 26);
+            this.textBox7.Size = new System.Drawing.Size(219, 26);
             this.textBox7.TabIndex = 22;
             // 
             // textBox8
@@ -308,7 +308,7 @@
             this.textBox8.Location = new System.Drawing.Point(874, 376);
             this.textBox8.Margin = new System.Windows.Forms.Padding(5);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(256, 26);
+            this.textBox8.Size = new System.Drawing.Size(219, 26);
             this.textBox8.TabIndex = 23;
             // 
             // textBox9
@@ -317,7 +317,7 @@
             this.textBox9.Location = new System.Drawing.Point(874, 238);
             this.textBox9.Margin = new System.Windows.Forms.Padding(5);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(256, 26);
+            this.textBox9.Size = new System.Drawing.Size(219, 26);
             this.textBox9.TabIndex = 24;
             // 
             // textBox10
@@ -326,7 +326,7 @@
             this.textBox10.Location = new System.Drawing.Point(874, 330);
             this.textBox10.Margin = new System.Windows.Forms.Padding(5);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(256, 26);
+            this.textBox10.Size = new System.Drawing.Size(219, 26);
             this.textBox10.TabIndex = 25;
             // 
             // dateTimePicker2
@@ -335,7 +335,7 @@
             this.dateTimePicker2.Location = new System.Drawing.Point(874, 192);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(5);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(256, 26);
+            this.dateTimePicker2.Size = new System.Drawing.Size(219, 26);
             this.dateTimePicker2.TabIndex = 26;
             // 
             // dateTimePicker3
@@ -344,67 +344,69 @@
             this.dateTimePicker3.Location = new System.Drawing.Point(874, 284);
             this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(5);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(256, 26);
+            this.dateTimePicker3.Size = new System.Drawing.Size(219, 26);
             this.dateTimePicker3.TabIndex = 27;
             // 
             // textBox11
             // 
             this.textBox11.Location = new System.Drawing.Point(874, 422);
+            this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(256, 26);
+            this.textBox11.Size = new System.Drawing.Size(219, 118);
             this.textBox11.TabIndex = 28;
             // 
-            // btnSave
+            // btnDbtSave
             // 
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(82, 504);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(115, 36);
-            this.btnSave.TabIndex = 29;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.button1_Click);
+            this.btnDbtSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDbtSave.Location = new System.Drawing.Point(82, 504);
+            this.btnDbtSave.Name = "btnDbtSave";
+            this.btnDbtSave.Size = new System.Drawing.Size(115, 36);
+            this.btnDbtSave.TabIndex = 29;
+            this.btnDbtSave.Text = "Save";
+            this.btnDbtSave.UseVisualStyleBackColor = true;
+            this.btnDbtSave.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnUpdate
+            // btnDbtUpdate
             // 
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(205, 504);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(115, 36);
-            this.btnUpdate.TabIndex = 30;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnDbtUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDbtUpdate.Location = new System.Drawing.Point(205, 504);
+            this.btnDbtUpdate.Name = "btnDbtUpdate";
+            this.btnDbtUpdate.Size = new System.Drawing.Size(115, 36);
+            this.btnDbtUpdate.TabIndex = 30;
+            this.btnDbtUpdate.Text = "Update";
+            this.btnDbtUpdate.UseVisualStyleBackColor = true;
             // 
-            // btnDelete
+            // btnDbtDelete
             // 
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(328, 504);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(115, 36);
-            this.btnDelete.TabIndex = 31;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDbtDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDbtDelete.Location = new System.Drawing.Point(328, 504);
+            this.btnDbtDelete.Name = "btnDbtDelete";
+            this.btnDbtDelete.Size = new System.Drawing.Size(115, 36);
+            this.btnDbtDelete.TabIndex = 31;
+            this.btnDbtDelete.Text = "Delete";
+            this.btnDbtDelete.UseVisualStyleBackColor = true;
             // 
-            // btnExit
+            // btnDbtClose
             // 
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.Red;
-            this.btnExit.Location = new System.Drawing.Point(451, 504);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(115, 36);
-            this.btnExit.TabIndex = 32;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnDbtClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDbtClose.ForeColor = System.Drawing.Color.Red;
+            this.btnDbtClose.Location = new System.Drawing.Point(451, 504);
+            this.btnDbtClose.Name = "btnDbtClose";
+            this.btnDbtClose.Size = new System.Drawing.Size(115, 36);
+            this.btnDbtClose.TabIndex = 32;
+            this.btnDbtClose.Text = "Close";
+            this.btnDbtClose.UseVisualStyleBackColor = true;
             // 
             // frmDebtForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1176, 624);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnSave);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnDbtClose);
+            this.Controls.Add(this.btnDbtDelete);
+            this.Controls.Add(this.btnDbtUpdate);
+            this.Controls.Add(this.btnDbtSave);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.dateTimePicker3);
             this.Controls.Add(this.dateTimePicker2);
@@ -437,7 +439,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmDebtForm";
-            this.Text = "DebtForm";
+            this.Text = "Debt Form";
             this.Load += new System.EventHandler(this.frmDebtForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -475,9 +477,9 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnDbtSave;
+        private System.Windows.Forms.Button btnDbtUpdate;
+        private System.Windows.Forms.Button btnDbtDelete;
+        private System.Windows.Forms.Button btnDbtClose;
     }
 }
