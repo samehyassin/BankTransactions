@@ -35,5 +35,10 @@ namespace BankTransactions
             frmWithdrawalForm withdfrom = new frmWithdrawalForm();
             withdfrom.ShowDialog();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
