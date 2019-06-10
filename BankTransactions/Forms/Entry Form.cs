@@ -26,7 +26,7 @@ namespace BankTransactions
 
         private void btnDebt_Click(object sender, EventArgs e)
         {
-            frmDebtForm debtfrom = new frmDebtForm();
+            frmDeposit debtfrom = new frmDeposit();
             debtfrom.ShowDialog();
         }
 

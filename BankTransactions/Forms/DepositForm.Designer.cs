@@ -1,6 +1,6 @@
 ﻿namespace BankTransactions.Forms
 {
-    partial class frmDebtForm
+    partial class frmDeposit
     {
         /// <summary>
         /// Required designer variable.
@@ -71,9 +71,9 @@
             this.label1.Location = new System.Drawing.Point(496, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 46);
+            this.label1.Size = new System.Drawing.Size(272, 46);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Debt";
+            this.label1.Text = "Cash Deposit";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label2
@@ -398,7 +398,7 @@
             this.btnDbtClose.UseVisualStyleBackColor = true;
             this.btnDbtClose.Click += new System.EventHandler(this.btnDbtClose_Click);
             // 
-            // frmDebtForm
+            // frmDeposit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -439,10 +439,10 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "frmDebtForm";
+            this.Name = "frmDeposit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Debt Form";
-            this.Load += new System.EventHandler(this.frmDebtForm_Load);
+            this.Text = "Deposit Form";
+           // this.Load += new System.EventHandler(this.frmDebtForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

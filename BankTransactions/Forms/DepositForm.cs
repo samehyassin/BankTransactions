@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace BankTransactions.Forms
 {
-    public partial class frmDebtForm : Form
+    public partial class frmDeposit : Form
     {
-        public frmDebtForm()
+        public frmDeposit()
         {
             InitializeComponent();
         }
 
        
 
-        private void frmDebtForm_Load(object sender, EventArgs e)
+        private void frmDeposit_Load(object sender, EventArgs e)
         {
 
         }
@@ -31,7 +31,7 @@ namespace BankTransactions.Forms
 
         private void btnDbtClose_Click(object sender, EventArgs e)
         {
-            frmDebtForm.ActiveForm.Close();
+            frmDeposit.ActiveForm.Close();
         }
     }
 }
