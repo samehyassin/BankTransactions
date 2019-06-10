@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using BankTransactions.Forms;
 
 namespace BankTransactions
 {
@@ -19,7 +21,19 @@ namespace BankTransactions
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            frmEntryForm.ActiveForm.Dispose();
+        }
 
+        private void btnDebt_Click(object sender, EventArgs e)
+        {
+            frmDebtForm debtfrom = new frmDebtForm();
+            debtfrom.ShowDialog();
+        }
+
+        private void btnWithdrawal_Click(object sender, EventArgs e)
+        {
+            frmWithdrawalForm withdfrom = new frmWithdrawalForm();
+            withdfrom.ShowDialog();
         }
     }
 }

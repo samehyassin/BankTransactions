@@ -16,5 +16,10 @@ namespace BankTransactions.Forms
         {
             InitializeComponent();
         }
+
+        private void btnwthClose_Click(object sender, EventArgs e)
+        {
+            frmWithdrawalForm.ActiveForm.Close();
+        }
     }
 }

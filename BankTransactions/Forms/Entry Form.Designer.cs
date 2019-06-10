@@ -45,6 +45,7 @@
             this.btnDebt.TabIndex = 0;
             this.btnDebt.Text = "Debt";
             this.btnDebt.UseVisualStyleBackColor = false;
+            this.btnDebt.Click += new System.EventHandler(this.btnDebt_Click);
             // 
             // button2
             // 
@@ -66,6 +67,7 @@
             this.btnWithdrawal.TabIndex = 0;
             this.btnWithdrawal.Text = "Withdrawal";
             this.btnWithdrawal.UseVisualStyleBackColor = false;
+            this.btnWithdrawal.Click += new System.EventHandler(this.btnWithdrawal_Click);
             // 
             // btnExit
             // 

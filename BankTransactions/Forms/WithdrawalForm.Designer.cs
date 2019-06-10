@@ -117,6 +117,7 @@
             this.btnwthClose.TabIndex = 36;
             this.btnwthClose.Text = "Close";
             this.btnwthClose.UseVisualStyleBackColor = true;
+            this.btnwthClose.Click += new System.EventHandler(this.btnwthClose_Click);
             // 
             // btnwthDelete
             // 
@@ -211,7 +212,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmWithdrawalForm";
-            this.Text = "WithdrawalForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Withdrawal Form";
             this.ResumeLayout(false);
             this.PerformLayout();
 

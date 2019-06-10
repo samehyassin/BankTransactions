@@ -17,7 +17,7 @@ namespace BankTransactions
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmWithdrawalForm());
+            Application.Run(new frmEntryForm());
         }
     }
 }

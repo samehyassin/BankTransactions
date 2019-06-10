@@ -28,5 +28,10 @@ namespace BankTransactions.Forms
         {
 
         }
+
+        private void btnDbtClose_Click(object sender, EventArgs e)
+        {
+            frmDebtForm.ActiveForm.Close();
+        }
     }
 }
