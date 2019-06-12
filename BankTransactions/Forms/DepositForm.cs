@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//
+using BankTransactions;
 
 namespace BankTransactions.Forms
 {
     public partial class frmDeposit : Form
     {
+        ApplicationContext db = new ApplicationContext();
         public frmDeposit()
         {
             InitializeComponent();
@@ -21,12 +24,12 @@ namespace BankTransactions.Forms
 
         private void frmDeposit_Load(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDbtSave_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnDbtClose_Click(object sender, EventArgs e)

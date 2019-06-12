@@ -44,25 +44,25 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtInvoiceNumber = new System.Windows.Forms.TextBox();
+            this.txtInvoiceAmount = new System.Windows.Forms.TextBox();
+            this.txtAmountAdded = new System.Windows.Forms.TextBox();
+            this.txtSalesReceiptno = new System.Windows.Forms.TextBox();
+            this.txtSalesReceiptAmount = new System.Windows.Forms.TextBox();
+            this.dtpDeposit = new System.Windows.Forms.DateTimePicker();
+            this.txtCheckNumber = new System.Windows.Forms.TextBox();
+            this.txtRefNumber = new System.Windows.Forms.TextBox();
+            this.dtpCheckDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpRefDate = new System.Windows.Forms.DateTimePicker();
+            this.txtNote = new System.Windows.Forms.TextBox();
             this.btnDbtSave = new System.Windows.Forms.Button();
             this.btnDbtUpdate = new System.Windows.Forms.Button();
             this.btnDbtDelete = new System.Windows.Forms.Button();
             this.btnDbtClose = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbxCustomerName = new System.Windows.Forms.ComboBox();
+            this.cbxEmployeeName = new System.Windows.Forms.ComboBox();
+            this.cbxPaymentMethod = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -233,130 +233,103 @@
             this.label15.TabIndex = 14;
             this.label15.Text = "Note";
             // 
-            // textBox1
+            // txtInvoiceNumber
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(309, 190);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(219, 26);
-            this.textBox1.TabIndex = 15;
+            this.txtInvoiceNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInvoiceNumber.Location = new System.Drawing.Point(309, 236);
+            this.txtInvoiceNumber.Margin = new System.Windows.Forms.Padding(5);
+            this.txtInvoiceNumber.Name = "txtInvoiceNumber";
+            this.txtInvoiceNumber.Size = new System.Drawing.Size(219, 26);
+            this.txtInvoiceNumber.TabIndex = 16;
             // 
-            // textBox2
+            // txtInvoiceAmount
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(309, 236);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(219, 26);
-            this.textBox2.TabIndex = 16;
+            this.txtInvoiceAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInvoiceAmount.Location = new System.Drawing.Point(309, 282);
+            this.txtInvoiceAmount.Margin = new System.Windows.Forms.Padding(5);
+            this.txtInvoiceAmount.Name = "txtInvoiceAmount";
+            this.txtInvoiceAmount.Size = new System.Drawing.Size(219, 26);
+            this.txtInvoiceAmount.TabIndex = 17;
             // 
-            // textBox3
+            // txtAmountAdded
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(309, 282);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(219, 26);
-            this.textBox3.TabIndex = 17;
+            this.txtAmountAdded.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmountAdded.Location = new System.Drawing.Point(309, 328);
+            this.txtAmountAdded.Margin = new System.Windows.Forms.Padding(5);
+            this.txtAmountAdded.Name = "txtAmountAdded";
+            this.txtAmountAdded.Size = new System.Drawing.Size(219, 26);
+            this.txtAmountAdded.TabIndex = 18;
             // 
-            // textBox4
+            // txtSalesReceiptno
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(309, 328);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(219, 26);
-            this.textBox4.TabIndex = 18;
+            this.txtSalesReceiptno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalesReceiptno.Location = new System.Drawing.Point(309, 374);
+            this.txtSalesReceiptno.Margin = new System.Windows.Forms.Padding(5);
+            this.txtSalesReceiptno.Name = "txtSalesReceiptno";
+            this.txtSalesReceiptno.Size = new System.Drawing.Size(219, 26);
+            this.txtSalesReceiptno.TabIndex = 19;
             // 
-            // textBox5
+            // txtSalesReceiptAmount
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(309, 374);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(219, 26);
-            this.textBox5.TabIndex = 19;
+            this.txtSalesReceiptAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalesReceiptAmount.Location = new System.Drawing.Point(309, 420);
+            this.txtSalesReceiptAmount.Margin = new System.Windows.Forms.Padding(5);
+            this.txtSalesReceiptAmount.Name = "txtSalesReceiptAmount";
+            this.txtSalesReceiptAmount.Size = new System.Drawing.Size(219, 26);
+            this.txtSalesReceiptAmount.TabIndex = 20;
             // 
-            // textBox6
+            // dtpDeposit
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(309, 420);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(219, 26);
-            this.textBox6.TabIndex = 20;
+            this.dtpDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDeposit.Location = new System.Drawing.Point(309, 144);
+            this.dtpDeposit.Margin = new System.Windows.Forms.Padding(5);
+            this.dtpDeposit.Name = "dtpDeposit";
+            this.dtpDeposit.Size = new System.Drawing.Size(219, 26);
+            this.dtpDeposit.TabIndex = 21;
             // 
-            // dateTimePicker1
+            // txtCheckNumber
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(309, 144);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(5);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(219, 26);
-            this.dateTimePicker1.TabIndex = 21;
+            this.txtCheckNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCheckNumber.Location = new System.Drawing.Point(874, 238);
+            this.txtCheckNumber.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCheckNumber.Name = "txtCheckNumber";
+            this.txtCheckNumber.Size = new System.Drawing.Size(219, 26);
+            this.txtCheckNumber.TabIndex = 24;
             // 
-            // textBox7
+            // txtRefNumber
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(874, 146);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(219, 26);
-            this.textBox7.TabIndex = 22;
+            this.txtRefNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRefNumber.Location = new System.Drawing.Point(874, 330);
+            this.txtRefNumber.Margin = new System.Windows.Forms.Padding(5);
+            this.txtRefNumber.Name = "txtRefNumber";
+            this.txtRefNumber.Size = new System.Drawing.Size(219, 26);
+            this.txtRefNumber.TabIndex = 25;
             // 
-            // textBox8
+            // dtpCheckDate
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(874, 376);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(219, 26);
-            this.textBox8.TabIndex = 23;
+            this.dtpCheckDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpCheckDate.Location = new System.Drawing.Point(874, 192);
+            this.dtpCheckDate.Margin = new System.Windows.Forms.Padding(5);
+            this.dtpCheckDate.Name = "dtpCheckDate";
+            this.dtpCheckDate.Size = new System.Drawing.Size(219, 26);
+            this.dtpCheckDate.TabIndex = 26;
             // 
-            // textBox9
+            // dtpRefDate
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(874, 238);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(219, 26);
-            this.textBox9.TabIndex = 24;
+            this.dtpRefDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpRefDate.Location = new System.Drawing.Point(874, 284);
+            this.dtpRefDate.Margin = new System.Windows.Forms.Padding(5);
+            this.dtpRefDate.Name = "dtpRefDate";
+            this.dtpRefDate.Size = new System.Drawing.Size(219, 26);
+            this.dtpRefDate.TabIndex = 27;
             // 
-            // textBox10
+            // txtNote
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(874, 330);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(219, 26);
-            this.textBox10.TabIndex = 25;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(874, 192);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(5);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(219, 26);
-            this.dateTimePicker2.TabIndex = 26;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Location = new System.Drawing.Point(874, 284);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(5);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(219, 26);
-            this.dateTimePicker3.TabIndex = 27;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(874, 422);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(219, 118);
-            this.textBox11.TabIndex = 28;
+            this.txtNote.Location = new System.Drawing.Point(874, 422);
+            this.txtNote.Multiline = true;
+            this.txtNote.Name = "txtNote";
+            this.txtNote.Size = new System.Drawing.Size(219, 118);
+            this.txtNote.TabIndex = 28;
             // 
             // btnDbtSave
             // 
@@ -367,7 +340,6 @@
             this.btnDbtSave.TabIndex = 29;
             this.btnDbtSave.Text = "Save";
             this.btnDbtSave.UseVisualStyleBackColor = true;
-            this.btnDbtSave.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnDbtUpdate
             // 
@@ -411,31 +383,55 @@
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
+            // cbxCustomerName
+            // 
+            this.cbxCustomerName.FormattingEnabled = true;
+            this.cbxCustomerName.Location = new System.Drawing.Point(309, 188);
+            this.cbxCustomerName.Name = "cbxCustomerName";
+            this.cbxCustomerName.Size = new System.Drawing.Size(219, 28);
+            this.cbxCustomerName.TabIndex = 34;
+            // 
+            // cbxEmployeeName
+            // 
+            this.cbxEmployeeName.FormattingEnabled = true;
+            this.cbxEmployeeName.Location = new System.Drawing.Point(874, 374);
+            this.cbxEmployeeName.Name = "cbxEmployeeName";
+            this.cbxEmployeeName.Size = new System.Drawing.Size(219, 28);
+            this.cbxEmployeeName.TabIndex = 35;
+            // 
+            // cbxPaymentMethod
+            // 
+            this.cbxPaymentMethod.FormattingEnabled = true;
+            this.cbxPaymentMethod.Location = new System.Drawing.Point(872, 142);
+            this.cbxPaymentMethod.Name = "cbxPaymentMethod";
+            this.cbxPaymentMethod.Size = new System.Drawing.Size(221, 28);
+            this.cbxPaymentMethod.TabIndex = 36;
+            // 
             // frmDeposit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1176, 624);
             this.ControlBox = false;
+            this.Controls.Add(this.cbxPaymentMethod);
+            this.Controls.Add(this.cbxEmployeeName);
+            this.Controls.Add(this.cbxCustomerName);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnDbtClose);
             this.Controls.Add(this.btnDbtDelete);
             this.Controls.Add(this.btnDbtUpdate);
             this.Controls.Add(this.btnDbtSave);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNote);
+            this.Controls.Add(this.dtpRefDate);
+            this.Controls.Add(this.dtpCheckDate);
+            this.Controls.Add(this.txtRefNumber);
+            this.Controls.Add(this.txtCheckNumber);
+            this.Controls.Add(this.dtpDeposit);
+            this.Controls.Add(this.txtSalesReceiptAmount);
+            this.Controls.Add(this.txtSalesReceiptno);
+            this.Controls.Add(this.txtAmountAdded);
+            this.Controls.Add(this.txtInvoiceAmount);
+            this.Controls.Add(this.txtInvoiceNumber);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -479,24 +475,24 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtInvoiceNumber;
+        private System.Windows.Forms.TextBox txtInvoiceAmount;
+        private System.Windows.Forms.TextBox txtAmountAdded;
+        private System.Windows.Forms.TextBox txtSalesReceiptno;
+        private System.Windows.Forms.TextBox txtSalesReceiptAmount;
+        private System.Windows.Forms.DateTimePicker dtpDeposit;
+        private System.Windows.Forms.TextBox txtCheckNumber;
+        private System.Windows.Forms.TextBox txtRefNumber;
+        private System.Windows.Forms.DateTimePicker dtpCheckDate;
+        private System.Windows.Forms.DateTimePicker dtpRefDate;
+        private System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.Button btnDbtSave;
         private System.Windows.Forms.Button btnDbtUpdate;
         private System.Windows.Forms.Button btnDbtDelete;
         private System.Windows.Forms.Button btnDbtClose;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cbxCustomerName;
+        private System.Windows.Forms.ComboBox cbxEmployeeName;
+        private System.Windows.Forms.ComboBox cbxPaymentMethod;
     }
 }
