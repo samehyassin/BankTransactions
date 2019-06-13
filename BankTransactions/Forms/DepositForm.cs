@@ -27,14 +27,14 @@ namespace BankTransactions.Forms
             
         }
 
-        private void btnDbtSave_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnDbtClose_Click(object sender, EventArgs e)
         {
             frmDeposit.ActiveForm.Close();
+        }
+
+        private void btnDbtSave_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

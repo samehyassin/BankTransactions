@@ -340,6 +340,7 @@
             this.btnDbtSave.TabIndex = 29;
             this.btnDbtSave.Text = "Save";
             this.btnDbtSave.UseVisualStyleBackColor = true;
+            this.btnDbtSave.Click += new System.EventHandler(this.btnDbtSave_Click_1);
             // 
             // btnDbtUpdate
             // 

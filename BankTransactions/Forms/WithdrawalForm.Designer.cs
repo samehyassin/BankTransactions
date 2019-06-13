@@ -39,12 +39,12 @@
             this.btnwthDelete = new System.Windows.Forms.Button();
             this.btnwthUpdate = new System.Windows.Forms.Button();
             this.btnwthSave = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.dtpWthDate = new System.Windows.Forms.DateTimePicker();
+            this.txtWthAmount = new System.Windows.Forms.TextBox();
+            this.txtWthRefNumber = new System.Windows.Forms.TextBox();
+            this.txtWthNote = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbxwthEmployeeName = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,46 +152,38 @@
             this.btnwthSave.Text = "Save";
             this.btnwthSave.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dtpWthDate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(277, 128);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(217, 26);
-            this.dateTimePicker1.TabIndex = 37;
+            this.dtpWthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dtpWthDate.Location = new System.Drawing.Point(277, 128);
+            this.dtpWthDate.Name = "dtpWthDate";
+            this.dtpWthDate.Size = new System.Drawing.Size(217, 26);
+            this.dtpWthDate.TabIndex = 37;
             // 
-            // textBox1
+            // txtWthAmount
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(277, 172);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(217, 26);
-            this.textBox1.TabIndex = 38;
+            this.txtWthAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtWthAmount.Location = new System.Drawing.Point(277, 172);
+            this.txtWthAmount.Name = "txtWthAmount";
+            this.txtWthAmount.Size = new System.Drawing.Size(217, 26);
+            this.txtWthAmount.TabIndex = 38;
             // 
-            // textBox2
+            // txtWthRefNumber
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(277, 209);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(217, 26);
-            this.textBox2.TabIndex = 39;
+            this.txtWthRefNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtWthRefNumber.Location = new System.Drawing.Point(277, 209);
+            this.txtWthRefNumber.Name = "txtWthRefNumber";
+            this.txtWthRefNumber.Size = new System.Drawing.Size(217, 26);
+            this.txtWthRefNumber.TabIndex = 39;
             // 
-            // textBox3
+            // txtWthNote
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox3.Location = new System.Drawing.Point(697, 130);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(217, 26);
-            this.textBox3.TabIndex = 40;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.Location = new System.Drawing.Point(697, 172);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(217, 108);
-            this.textBox4.TabIndex = 41;
+            this.txtWthNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtWthNote.Location = new System.Drawing.Point(697, 172);
+            this.txtWthNote.Multiline = true;
+            this.txtWthNote.Name = "txtWthNote";
+            this.txtWthNote.Size = new System.Drawing.Size(217, 108);
+            this.txtWthNote.TabIndex = 41;
             // 
             // pictureBox1
             // 
@@ -203,18 +195,27 @@
             this.pictureBox1.TabIndex = 42;
             this.pictureBox1.TabStop = false;
             // 
+            // cbxwthEmployeeName
+            // 
+            this.cbxwthEmployeeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cbxwthEmployeeName.FormattingEnabled = true;
+            this.cbxwthEmployeeName.Location = new System.Drawing.Point(697, 130);
+            this.cbxwthEmployeeName.Name = "cbxwthEmployeeName";
+            this.cbxwthEmployeeName.Size = new System.Drawing.Size(217, 28);
+            this.cbxwthEmployeeName.TabIndex = 43;
+            // 
             // frmWithdrawalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(979, 445);
             this.ControlBox = false;
+            this.Controls.Add(this.cbxwthEmployeeName);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txtWthNote);
+            this.Controls.Add(this.txtWthRefNumber);
+            this.Controls.Add(this.txtWthAmount);
+            this.Controls.Add(this.dtpWthDate);
             this.Controls.Add(this.btnwthClose);
             this.Controls.Add(this.btnwthDelete);
             this.Controls.Add(this.btnwthUpdate);
@@ -246,11 +247,11 @@
         private System.Windows.Forms.Button btnwthDelete;
         private System.Windows.Forms.Button btnwthUpdate;
         private System.Windows.Forms.Button btnwthSave;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.DateTimePicker dtpWthDate;
+        private System.Windows.Forms.TextBox txtWthAmount;
+        private System.Windows.Forms.TextBox txtWthRefNumber;
+        private System.Windows.Forms.TextBox txtWthNote;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cbxwthEmployeeName;
     }
 }
