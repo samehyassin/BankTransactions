@@ -399,6 +399,7 @@
             this.cbxEmployeeName.Name = "cbxEmployeeName";
             this.cbxEmployeeName.Size = new System.Drawing.Size(219, 28);
             this.cbxEmployeeName.TabIndex = 35;
+           // this.cbxEmployeeName.SelectionChangeCommitted += new System.EventHandler(this.cbxEmployeeName_SelectionChangeCommitted);
             // 
             // cbxPaymentMethod
             // 
@@ -453,6 +454,7 @@
             this.Name = "frmDeposit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Deposit Form";
+            this.Load += new System.EventHandler(this.frmDeposit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

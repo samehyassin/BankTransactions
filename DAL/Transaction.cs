@@ -44,7 +44,10 @@ namespace DAL
         public int WithdRefNumber { get; set; }
 
         [MaxLength(300)]
-        public string Note { get; set; }
+        public string DepositNote { get; set; }
+
+        [MaxLength(300)]
+        public string WithdrawalNote { get; set; }
 
         [ForeignKey("Employee")]
         public int EmpId { get; set; }

@@ -7,7 +7,7 @@ using System.Data.Entity;
 
 namespace DAL
 {
-    class ApplicationDBContext:DbContext
+    public class ApplicationDBContext:DbContext
     {
         public ApplicationDBContext()
             : base("Data Source=.; Initial Catalog=BankTransactionsDB; Integrated Security=true")
