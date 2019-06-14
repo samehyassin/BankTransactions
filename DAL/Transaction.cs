@@ -16,7 +16,7 @@ namespace DAL
 
         [Required]
         [DataType(DataType.Date)]
-        public DateTime Date { get; set; }
+        public DateTime DepositDate { get; set; }
 
         public int InvoiceNumber { get; set; }
         [Required]
@@ -34,6 +34,10 @@ namespace DAL
         public int CheckNumber { get; set; }
 
         public int RefNumber { get; set; }
+
+        [Required]
+        [DataType(DataType.Date)]
+        public DateTime WithdrawalDate { get; set; }
 
         public decimal WithdrawalAmount { get; set; }
 

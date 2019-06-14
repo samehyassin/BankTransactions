@@ -54,6 +54,10 @@
     <Compile Include="Migrations\201905272143172_Intial.Designer.cs">
       <DependentUpon>201905272143172_Intial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906142120207_withdrawalDateColumn.cs" />
+    <Compile Include="Migrations\201906142120207_withdrawalDateColumn.Designer.cs">
+      <DependentUpon>201906142120207_withdrawalDateColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Transaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,6 +69,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201905272143172_Intial.resx">
       <DependentUpon>201905272143172_Intial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906142120207_withdrawalDateColumn.resx">
+      <DependentUpon>201906142120207_withdrawalDateColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

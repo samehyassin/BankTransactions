@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 //
 using BankTransactions;
+using DAL;
 
 namespace BankTransactions.Forms
 {
     public partial class frmDeposit : Form
     {
-        ApplicationContext db = new ApplicationContext();
         public frmDeposit()
         {
             InitializeComponent();
@@ -32,9 +32,15 @@ namespace BankTransactions.Forms
             frmDeposit.ActiveForm.Close();
         }
 
-        private void btnDbtSave_Click_1(object sender, EventArgs e)
+        private void btnDbtSave_Click(object sender, EventArgs e)
         {
-            
+            using (var context = new ApplicationContext())
+            {
+                var trans = new Transaction()
+                {
+
+                };
+            }
         }
     }
 }

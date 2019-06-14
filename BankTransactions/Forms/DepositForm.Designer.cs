@@ -49,7 +49,7 @@
             this.txtAmountAdded = new System.Windows.Forms.TextBox();
             this.txtSalesReceiptno = new System.Windows.Forms.TextBox();
             this.txtSalesReceiptAmount = new System.Windows.Forms.TextBox();
-            this.dtpDeposit = new System.Windows.Forms.DateTimePicker();
+            this.dtpDepositDate = new System.Windows.Forms.DateTimePicker();
             this.txtCheckNumber = new System.Windows.Forms.TextBox();
             this.txtRefNumber = new System.Windows.Forms.TextBox();
             this.dtpCheckDate = new System.Windows.Forms.DateTimePicker();
@@ -278,14 +278,14 @@
             this.txtSalesReceiptAmount.Size = new System.Drawing.Size(219, 26);
             this.txtSalesReceiptAmount.TabIndex = 20;
             // 
-            // dtpDeposit
+            // dtpDepositDate
             // 
-            this.dtpDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDeposit.Location = new System.Drawing.Point(309, 144);
-            this.dtpDeposit.Margin = new System.Windows.Forms.Padding(5);
-            this.dtpDeposit.Name = "dtpDeposit";
-            this.dtpDeposit.Size = new System.Drawing.Size(219, 26);
-            this.dtpDeposit.TabIndex = 21;
+            this.dtpDepositDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDepositDate.Location = new System.Drawing.Point(309, 144);
+            this.dtpDepositDate.Margin = new System.Windows.Forms.Padding(5);
+            this.dtpDepositDate.Name = "dtpDepositDate";
+            this.dtpDepositDate.Size = new System.Drawing.Size(219, 26);
+            this.dtpDepositDate.TabIndex = 21;
             // 
             // txtCheckNumber
             // 
@@ -340,7 +340,7 @@
             this.btnDbtSave.TabIndex = 29;
             this.btnDbtSave.Text = "Save";
             this.btnDbtSave.UseVisualStyleBackColor = true;
-            this.btnDbtSave.Click += new System.EventHandler(this.btnDbtSave_Click_1);
+            this.btnDbtSave.Click += new System.EventHandler(this.btnDbtSave_Click);
             // 
             // btnDbtUpdate
             // 
@@ -427,7 +427,7 @@
             this.Controls.Add(this.dtpCheckDate);
             this.Controls.Add(this.txtRefNumber);
             this.Controls.Add(this.txtCheckNumber);
-            this.Controls.Add(this.dtpDeposit);
+            this.Controls.Add(this.dtpDepositDate);
             this.Controls.Add(this.txtSalesReceiptAmount);
             this.Controls.Add(this.txtSalesReceiptno);
             this.Controls.Add(this.txtAmountAdded);
@@ -481,7 +481,7 @@
         private System.Windows.Forms.TextBox txtAmountAdded;
         private System.Windows.Forms.TextBox txtSalesReceiptno;
         private System.Windows.Forms.TextBox txtSalesReceiptAmount;
-        private System.Windows.Forms.DateTimePicker dtpDeposit;
+        private System.Windows.Forms.DateTimePicker dtpDepositDate;
         private System.Windows.Forms.TextBox txtCheckNumber;
         private System.Windows.Forms.TextBox txtRefNumber;
         private System.Windows.Forms.DateTimePicker dtpCheckDate;
