@@ -80,6 +80,13 @@ namespace BankTransactions.Forms
             }
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+            frmCustomer custfrom = new frmCustomer();
+            custfrom.ShowDialog();
+        }
+
         //private void cbxEmployeeName_SelectionChangeCommitted(object sender, EventArgs e)
         //{
         //    string x = cbxEmployeeName.SelectedText;

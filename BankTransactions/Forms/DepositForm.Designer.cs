@@ -63,7 +63,9 @@
             this.cbxCustomerName = new System.Windows.Forms.ComboBox();
             this.cbxEmployeeName = new System.Windows.Forms.ComboBox();
             this.cbxPaymentMethod = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -399,7 +401,6 @@
             this.cbxEmployeeName.Name = "cbxEmployeeName";
             this.cbxEmployeeName.Size = new System.Drawing.Size(219, 28);
             this.cbxEmployeeName.TabIndex = 35;
-           // this.cbxEmployeeName.SelectionChangeCommitted += new System.EventHandler(this.cbxEmployeeName_SelectionChangeCommitted);
             // 
             // cbxPaymentMethod
             // 
@@ -409,12 +410,24 @@
             this.cbxPaymentMethod.Size = new System.Drawing.Size(221, 28);
             this.cbxPaymentMethod.TabIndex = 36;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(534, 188);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 37;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // frmDeposit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1176, 624);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.cbxPaymentMethod);
             this.Controls.Add(this.cbxEmployeeName);
             this.Controls.Add(this.cbxCustomerName);
@@ -456,6 +469,7 @@
             this.Text = "Deposit Form";
             this.Load += new System.EventHandler(this.frmDeposit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -497,5 +511,6 @@
         private System.Windows.Forms.ComboBox cbxCustomerName;
         private System.Windows.Forms.ComboBox cbxEmployeeName;
         private System.Windows.Forms.ComboBox cbxPaymentMethod;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
