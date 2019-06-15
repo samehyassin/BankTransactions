@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//
+using BankTransactions;
+using DAL;
 
 namespace BankTransactions.Forms
 {
@@ -25,6 +28,37 @@ namespace BankTransactions.Forms
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             frmCustomer.ActiveForm.Close();
+        }
+
+        private void frmCustomer_Load(object sender, EventArgs e)
+        {
+            FillCustGrid();
+        }
+        public void FillCustGrid()
+        { 
+        using (var context = new ApplicationDBContext())
+            {
+                dgvCustomer.DataSource = context.Customers.ToList();
+            }
+        }
+
+        private void btnCustSave_Click(object sender, EventArgs e)
+        {
+            using (var context = new ApplicationDBContext())
+            {
+                var customer = new Customer()
+                {
+                   CustomerName = txtCustomerName.Text,
+                   Phone = txtPhone.Text,
+                   Mobile = txtMobile.Text,
+                   Email = txtEmail.Text,
+                   Address = txtAddress.Text,
+                   TaxFileNumber = Convert.ToInt32(txtTaxFileNo.Text)
+                };
+                context.Customers.Add(customer);
+                context.SaveChanges();
+            }
+            FillCustGrid();
         }
     }
 }

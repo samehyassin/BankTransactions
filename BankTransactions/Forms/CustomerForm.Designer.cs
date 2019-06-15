@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustomer));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,19 +37,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtCustomerName = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtMobile = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtTaxFileNo = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.dgvCustomer = new System.Windows.Forms.DataGridView();
             this.btnCustSave = new System.Windows.Forms.Button();
             this.btnCustEdit = new System.Windows.Forms.Button();
             this.btnCustDelete = new System.Windows.Forms.Button();
             this.btnCustClose = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,9 +73,9 @@
             this.label2.Location = new System.Drawing.Point(51, 114);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 23);
+            this.label2.Size = new System.Drawing.Size(160, 23);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Cutomer Name";
+            this.label2.Text = "Cutomer Name:";
             // 
             // label3
             // 
@@ -83,9 +84,9 @@
             this.label3.Location = new System.Drawing.Point(51, 160);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 23);
+            this.label3.Size = new System.Drawing.Size(76, 23);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Phone";
+            this.label3.Text = "Phone:";
             // 
             // label4
             // 
@@ -94,9 +95,9 @@
             this.label4.Location = new System.Drawing.Point(51, 206);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 23);
+            this.label4.Size = new System.Drawing.Size(81, 23);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Mobile";
+            this.label4.Text = "Mobile:";
             // 
             // label5
             // 
@@ -105,9 +106,9 @@
             this.label5.Location = new System.Drawing.Point(520, 114);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 23);
+            this.label5.Size = new System.Drawing.Size(78, 23);
             this.label5.TabIndex = 4;
-            this.label5.Text = "E-mail";
+            this.label5.Text = "E-mail:";
             // 
             // label6
             // 
@@ -116,9 +117,9 @@
             this.label6.Location = new System.Drawing.Point(520, 206);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 23);
+            this.label6.Size = new System.Drawing.Size(93, 23);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Adress";
+            this.label6.Text = "Address:";
             // 
             // label8
             // 
@@ -127,73 +128,81 @@
             this.label8.Location = new System.Drawing.Point(505, 160);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(166, 23);
+            this.label8.Size = new System.Drawing.Size(173, 23);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Tax File Number";
+            this.label8.Text = "Tax File Number:";
             // 
-            // textBox1
+            // txtCustomerName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(233, 114);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 27);
-            this.textBox1.TabIndex = 8;
+            this.txtCustomerName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerName.Location = new System.Drawing.Point(233, 114);
+            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.Size = new System.Drawing.Size(196, 27);
+            this.txtCustomerName.TabIndex = 8;
             // 
-            // textBox2
+            // txtPhone
             // 
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(233, 160);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 27);
-            this.textBox2.TabIndex = 9;
+            this.txtPhone.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Location = new System.Drawing.Point(233, 160);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(196, 27);
+            this.txtPhone.TabIndex = 9;
             // 
-            // textBox3
+            // txtMobile
             // 
-            this.textBox3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(233, 206);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(196, 27);
-            this.textBox3.TabIndex = 10;
+            this.txtMobile.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMobile.Location = new System.Drawing.Point(233, 206);
+            this.txtMobile.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMobile.Name = "txtMobile";
+            this.txtMobile.Size = new System.Drawing.Size(196, 27);
+            this.txtMobile.TabIndex = 10;
             // 
-            // textBox4
+            // txtEmail
             // 
-            this.textBox4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(685, 107);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(196, 27);
-            this.textBox4.TabIndex = 11;
+            this.txtEmail.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(685, 107);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(196, 27);
+            this.txtEmail.TabIndex = 11;
             // 
-            // textBox5
+            // txtTaxFileNo
             // 
-            this.textBox5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(685, 153);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(196, 27);
-            this.textBox5.TabIndex = 12;
+            this.txtTaxFileNo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTaxFileNo.Location = new System.Drawing.Point(685, 153);
+            this.txtTaxFileNo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTaxFileNo.Name = "txtTaxFileNo";
+            this.txtTaxFileNo.Size = new System.Drawing.Size(196, 27);
+            this.txtTaxFileNo.TabIndex = 12;
             // 
-            // textBox6
+            // txtAddress
             // 
-            this.textBox6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(685, 201);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(196, 27);
-            this.textBox6.TabIndex = 13;
+            this.txtAddress.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(685, 201);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(196, 27);
+            this.txtAddress.TabIndex = 13;
             // 
-            // dataGridView1
+            // dgvCustomer
             // 
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(55, 271);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(848, 202);
-            this.dataGridView1.TabIndex = 14;
+            this.dgvCustomer.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCustomer.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvCustomer.Location = new System.Drawing.Point(55, 271);
+            this.dgvCustomer.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dgvCustomer.Name = "dgvCustomer";
+            this.dgvCustomer.Size = new System.Drawing.Size(848, 202);
+            this.dgvCustomer.TabIndex = 14;
             // 
             // btnCustSave
             // 
@@ -205,6 +214,7 @@
             this.btnCustSave.TabIndex = 15;
             this.btnCustSave.Text = "Save";
             this.btnCustSave.UseVisualStyleBackColor = true;
+            this.btnCustSave.Click += new System.EventHandler(this.btnCustSave_Click);
             // 
             // btnCustEdit
             // 
@@ -262,13 +272,13 @@
             this.Controls.Add(this.btnCustDelete);
             this.Controls.Add(this.btnCustEdit);
             this.Controls.Add(this.btnCustSave);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dgvCustomer);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtTaxFileNo);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtMobile);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.txtCustomerName);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -282,7 +292,8 @@
             this.Name = "frmCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customers Form";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmCustomer_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -298,13 +309,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtCustomerName;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtMobile;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtTaxFileNo;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.DataGridView dgvCustomer;
         private System.Windows.Forms.Button btnCustSave;
         private System.Windows.Forms.Button btnCustEdit;
         private System.Windows.Forms.Button btnCustDelete;

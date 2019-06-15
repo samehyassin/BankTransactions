@@ -76,7 +76,8 @@ namespace BankTransactions.Forms
                     EmpId = Convert.ToInt32(cbxEmployeeName.SelectedValue),
                     CustId = Convert.ToInt32(cbxCustomerName.SelectedValue)
                   };
-
+                context.Transactions.Add(trans);
+                context.SaveChanges();
             }
         }
 
