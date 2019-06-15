@@ -16,5 +16,15 @@ namespace BankTransactions.Forms
         {
             InitializeComponent();
         }
+
+        private void btnCustClose_Click(object sender, EventArgs e)
+        {
+            frmCustomer.ActiveForm.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmCustomer.ActiveForm.Close();
+        }
     }
 }

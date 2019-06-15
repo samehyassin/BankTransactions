@@ -21,5 +21,15 @@ namespace BankTransactions.Forms
         {
             frmWithdrawalForm.ActiveForm.Close();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            frmWithdrawalForm.ActiveForm.Close();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

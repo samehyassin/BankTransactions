@@ -87,6 +87,16 @@ namespace BankTransactions.Forms
             custfrom.ShowDialog();
         }
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            frmDeposit.ActiveForm.Close();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
         //private void cbxEmployeeName_SelectionChangeCommitted(object sender, EventArgs e)
         //{
         //    string x = cbxEmployeeName.SelectedText;
