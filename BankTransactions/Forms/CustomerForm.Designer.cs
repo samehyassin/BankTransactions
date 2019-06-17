@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustomer));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -136,7 +135,7 @@
             // 
             this.txtCustomerName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCustomerName.Location = new System.Drawing.Point(233, 114);
-            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(5);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Size = new System.Drawing.Size(196, 27);
             this.txtCustomerName.TabIndex = 8;
@@ -145,7 +144,7 @@
             // 
             this.txtPhone.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(233, 160);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(5);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(196, 27);
             this.txtPhone.TabIndex = 9;
@@ -154,7 +153,7 @@
             // 
             this.txtMobile.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMobile.Location = new System.Drawing.Point(233, 206);
-            this.txtMobile.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMobile.Margin = new System.Windows.Forms.Padding(5);
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(196, 27);
             this.txtMobile.TabIndex = 10;
@@ -163,7 +162,7 @@
             // 
             this.txtEmail.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(685, 107);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(5);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(196, 27);
             this.txtEmail.TabIndex = 11;
@@ -172,7 +171,7 @@
             // 
             this.txtTaxFileNo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTaxFileNo.Location = new System.Drawing.Point(685, 153);
-            this.txtTaxFileNo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTaxFileNo.Margin = new System.Windows.Forms.Padding(5);
             this.txtTaxFileNo.Name = "txtTaxFileNo";
             this.txtTaxFileNo.Size = new System.Drawing.Size(196, 27);
             this.txtTaxFileNo.TabIndex = 12;
@@ -181,7 +180,7 @@
             // 
             this.txtAddress.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(685, 201);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(5);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(196, 27);
             this.txtAddress.TabIndex = 13;
@@ -190,19 +189,12 @@
             // 
             this.dgvCustomer.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCustomer.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCustomer.Location = new System.Drawing.Point(55, 271);
-            this.dgvCustomer.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dgvCustomer.Margin = new System.Windows.Forms.Padding(5);
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.Size = new System.Drawing.Size(848, 202);
             this.dgvCustomer.TabIndex = 14;
+            this.dgvCustomer.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellDoubleClick);
             // 
             // btnCustSave
             // 
@@ -226,6 +218,7 @@
             this.btnCustEdit.TabIndex = 16;
             this.btnCustEdit.Text = "Edit";
             this.btnCustEdit.UseVisualStyleBackColor = true;
+            this.btnCustEdit.Click += new System.EventHandler(this.btnCustEdit_Click);
             // 
             // btnCustDelete
             // 
@@ -288,7 +281,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customers Form";
