@@ -10,6 +10,7 @@ using System.Windows.Forms;
 //
 using BankTransactions;
 using DAL;
+using ClearTextbox;
 
 namespace BankTransactions.Forms
 {
@@ -57,6 +58,7 @@ namespace BankTransactions.Forms
                 };
                 context.Customers.Add(customer);
                 context.SaveChanges();
+                Clear.ClearText(this);
             }
             FillCustGrid();
         }
