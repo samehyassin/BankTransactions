@@ -230,6 +230,7 @@
             this.btnCustDelete.TabIndex = 17;
             this.btnCustDelete.Text = "Delete";
             this.btnCustDelete.UseVisualStyleBackColor = true;
+            this.btnCustDelete.Click += new System.EventHandler(this.btnCustDelete_Click);
             // 
             // btnCustClose
             // 

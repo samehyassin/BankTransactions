@@ -64,7 +64,6 @@ namespace BankTransactions.Forms
             FillCustGrid();
         }
 
-        int CustId = 0;
         private void btnCustEdit_Click(object sender, EventArgs e)
         {
             //using (var context = new ApplicationDBContext())
@@ -82,6 +81,7 @@ namespace BankTransactions.Forms
         }
 
 
+        #region Select from GridView
         private void dgvCustomer_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             dgvCustomer.Columns[0].Name = "CustId";
@@ -91,7 +91,7 @@ namespace BankTransactions.Forms
             dgvCustomer.Columns[4].Name = "Email";
             dgvCustomer.Columns[5].Name = "Address";
             dgvCustomer.Columns[6].Name = "TaxFileNumber";
-            if (dgvCustomer.SelectedRows.Count >0 && dgvCustomer.SelectedRows.Count<=1 )
+            if (dgvCustomer.SelectedRows.Count > 0 && dgvCustomer.SelectedRows.Count <= 1)
             {
                 CustId = (int)dgvCustomer.Rows[e.RowIndex].Cells[0].Value;
                 txtCustomerName.Text = dgvCustomer.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -99,6 +99,27 @@ namespace BankTransactions.Forms
                 txtMobile.Text = dgvCustomer.Rows[e.RowIndex].Cells[3].Value.ToString();
                 txtEmail.Text = dgvCustomer.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtAddress.Text = dgvCustomer.Rows[e.RowIndex].Cells[5].Value.ToString();
+
+                btnCustSave.Enabled = false;
+                btnCustDelete.Enabled = false;
+                btnCustEdit.Enabled = true;
+            }
+        }
+        #endregion
+
+        private void btnCustDelete_Click(object sender, EventArgs e)
+        {
+            var confirmDelete = MessageBox.Show("Are You Sure Want to Delete This Customer  ??", "Confirm Delete!!", MessageBoxButtons.YesNo);
+            if (confirmDelete == DialogResult.Yes)
+            {
+                using (var context = new ApplicationDBContext())
+                {
+                    //using (var customer = new Customer())
+                    //{
+
+                    //};
+                }
+                
             }
         }
     }
