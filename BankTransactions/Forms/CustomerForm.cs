@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 //
-using BankTransactions;
-using DAL;
+using BusinessLayer;
 using ClearTextbox;
+using DAL;
 
 namespace BankTransactions.Forms
 {
@@ -36,8 +36,8 @@ namespace BankTransactions.Forms
             FillCustGrid();
         }
         public void FillCustGrid()
-        { 
-        using (var context = new ApplicationDBContext())
+        {
+            using (var context = new ApplicationDBContext())
             {
                 dgvCustomer.DataSource = context.Customers.ToList();
             }
@@ -45,22 +45,25 @@ namespace BankTransactions.Forms
 
         private void btnCustSave_Click(object sender, EventArgs e)
         {
-            using (var context = new ApplicationDBContext())
+            bool TaxFile = Int32.TryParse(txtTaxFileNo.Text, out int TaxFileNum);
+            var customer = new Customer()
             {
-                var customer = new Customer()
-                {
-                   CustomerName = txtCustomerName.Text,
-                   Phone = txtPhone.Text,
-                   Mobile = txtMobile.Text,
-                   Email = txtEmail.Text,
-                   Address = txtAddress.Text,
-                   TaxFileNumber = Convert.ToInt32(txtTaxFileNo.Text)
-                };
-                context.Customers.Add(customer);
-                context.SaveChanges();
-                MessageBox.Show("Customer Added Successfully");
-                Clear.ClearText(this);
-            }
+                CustomerName = txtCustomerName.Text,
+                Phone = txtPhone.Text,
+                Mobile = txtMobile.Text,
+                Email = txtEmail.Text,
+                Address = txtAddress.Text,
+                TaxFileNumber = TaxFileNum
+            };
+            //using (var context = new ApplicationDBContext())
+            //{
+            //    
+            //    context.Customers.Add(customer);
+            //    context.SaveChanges();
+            //    MessageBox.Show("Customer Added Successfully");
+            //    Clear.ClearText(this);
+            //}
+            MessageBox.Show(new BLCustomer().CustomerInsert(customer));
             FillCustGrid();
         }
 
@@ -93,7 +96,7 @@ namespace BankTransactions.Forms
             dgvCustomer.Columns[6].Name = "TaxFileNumber";
             if (dgvCustomer.SelectedRows.Count > 0 && dgvCustomer.SelectedRows.Count <= 1)
             {
-                CustId = (int)dgvCustomer.Rows[e.RowIndex].Cells[0].Value;
+                //CustId = (int)dgvCustomer.Rows[e.RowIndex].Cells[0].Value;
                 txtCustomerName.Text = dgvCustomer.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtPhone.Text = dgvCustomer.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txtMobile.Text = dgvCustomer.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -112,13 +115,13 @@ namespace BankTransactions.Forms
             var confirmDelete = MessageBox.Show("Are You Sure Want to Delete This Customer  ??", "Confirm Delete!!", MessageBoxButtons.YesNo);
             if (confirmDelete == DialogResult.Yes)
             {
-                using (var context = new ApplicationDBContext())
-                {
-                    //using (var customer = new Customer())
-                    //{
+                //using (var context = new ApplicationDBContext())
+                //{
+                //    //using (var customer = new Customer())
+                //    //{
 
-                    //};
-                }
+                //    //};
+                //}
                 
             }
         }

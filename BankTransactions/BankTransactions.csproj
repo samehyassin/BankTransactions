@@ -117,6 +117,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{2ab51ad8-aa7a-4eea-a49b-53ee80ac2106}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{05B48302-110D-4790-B91A-FD99815314B0}</Project>
       <Name>DAL</Name>
