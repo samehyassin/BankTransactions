@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 //
 using BankTransactions;
-//using DAL;
+using DAL;
 
 namespace BankTransactions.Forms
 {
@@ -25,28 +25,41 @@ namespace BankTransactions.Forms
         private void frmDeposit_Load(object sender, EventArgs e)
         {
             PaymentMethodCbx();
-            //using (var context = new ApplicationDBContext())
-            //{
-            //    var employees = context.Employees.ToList();
-
-            //    cbxEmployeeName.DataSource = employees;
-            //    cbxEmployeeName.DisplayMember = "Name";
-            //    cbxEmployeeName.ValueMember = "EmpId";
-            //}
-            //using (var context = new ApplicationDBContext())
-            //{
-            //    var customers = context.Customers.ToList();
-            //    cbxCustomerName.DataSource = customers;
-            //    cbxCustomerName.DisplayMember = "CustomerName";
-            //    cbxCustomerName.ValueMember = "CustId";
-            //}
-
+            CusterNamecbx();
+            EmployeeNamecbx();
         }
 
         private void btnDbtClose_Click(object sender, EventArgs e)
         {
             frmDeposit.ActiveForm.Close();
         }
+
+        #region Employee Name Method 
+        public void EmployeeNamecbx()
+        {
+            using (var context = new ApplicationDBContext())
+            {
+                var employees = context.Employees.ToList();
+
+                cbxEmployeeName.DataSource = employees;
+                cbxEmployeeName.DisplayMember = "Name";
+                cbxEmployeeName.ValueMember = "EmpId";
+            }
+        } 
+        #endregion
+
+        #region Customer Name Method 
+        public void CusterNamecbx()
+        {
+            using (var context = new ApplicationDBContext())
+            {
+                var customers = context.Customers.ToList();
+                cbxCustomerName.DataSource = customers;
+                cbxCustomerName.DisplayMember = "CustomerName";
+                cbxCustomerName.ValueMember = "CustId";
+            }
+        } 
+        #endregion
 
         #region Payment Method Combobox
         public void PaymentMethodCbx()
@@ -98,10 +111,10 @@ namespace BankTransactions.Forms
             this.WindowState = FormWindowState.Minimized;
         }
 
-        //private void cbxEmployeeName_SelectionChangeCommitted(object sender, EventArgs e)
-        //{
-        //    string x = cbxEmployeeName.SelectedText;
-        //    int y = Convert.ToInt16( cbxEmployeeName.SelectedValue);
-        //}
+        private void cbxEmployeeName_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            string x = cbxEmployeeName.SelectedText;
+            int y = Convert.ToInt16(cbxEmployeeName.SelectedValue);
+        }
     }
 }

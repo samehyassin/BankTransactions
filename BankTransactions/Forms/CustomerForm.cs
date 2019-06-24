@@ -43,6 +43,7 @@ namespace BankTransactions.Forms
             }
         }
 
+        #region Inser Customer
         private void btnCustSave_Click(object sender, EventArgs e)
         {
             bool TaxFile = Int32.TryParse(txtTaxFileNo.Text, out int TaxFileNum);
@@ -55,17 +56,11 @@ namespace BankTransactions.Forms
                 Address = txtAddress.Text,
                 TaxFileNumber = TaxFileNum
             };
-            //using (var context = new ApplicationDBContext())
-            //{
-            //    
-            //    context.Customers.Add(customer);
-            //    context.SaveChanges();
-            //    MessageBox.Show("Customer Added Successfully");
-            //    Clear.ClearText(this);
-            //}
             MessageBox.Show(new BLCustomer().CustomerInsert(customer));
             FillCustGrid();
-        }
+            Clear.ClearText(this);
+        } 
+        #endregion
 
         private void btnCustEdit_Click(object sender, EventArgs e)
         {
@@ -124,6 +119,11 @@ namespace BankTransactions.Forms
                 //}
                 
             }
+        }
+
+        private void dgvCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
