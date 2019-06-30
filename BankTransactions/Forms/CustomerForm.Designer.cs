@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustomer));
             this.label1 = new System.Windows.Forms.Label();
@@ -191,14 +190,6 @@
             // 
             this.dgvCustomer.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvCustomer.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCustomer.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvCustomer.Location = new System.Drawing.Point(55, 271);
@@ -221,36 +212,45 @@
             // btnCustSave
             // 
             this.btnCustSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnCustSave.Image = ((System.Drawing.Image)(resources.GetObject("btnCustSave.Image")));
+            this.btnCustSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCustSave.Location = new System.Drawing.Point(120, 504);
             this.btnCustSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCustSave.Name = "btnCustSave";
-            this.btnCustSave.Size = new System.Drawing.Size(104, 36);
+            this.btnCustSave.Size = new System.Drawing.Size(138, 42);
             this.btnCustSave.TabIndex = 15;
             this.btnCustSave.Text = "Save";
+            this.btnCustSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCustSave.UseVisualStyleBackColor = true;
             this.btnCustSave.Click += new System.EventHandler(this.btnCustSave_Click);
             // 
             // btnCustEdit
             // 
             this.btnCustEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnCustEdit.Location = new System.Drawing.Point(229, 504);
+            this.btnCustEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnCustEdit.Image")));
+            this.btnCustEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustEdit.Location = new System.Drawing.Point(271, 504);
             this.btnCustEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCustEdit.Name = "btnCustEdit";
-            this.btnCustEdit.Size = new System.Drawing.Size(104, 36);
+            this.btnCustEdit.Size = new System.Drawing.Size(138, 42);
             this.btnCustEdit.TabIndex = 16;
             this.btnCustEdit.Text = "Edit";
+            this.btnCustEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCustEdit.UseVisualStyleBackColor = true;
             this.btnCustEdit.Click += new System.EventHandler(this.btnCustEdit_Click);
             // 
             // btnCustDelete
             // 
             this.btnCustDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnCustDelete.Location = new System.Drawing.Point(340, 504);
+            this.btnCustDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnCustDelete.Image")));
+            this.btnCustDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustDelete.Location = new System.Drawing.Point(422, 504);
             this.btnCustDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCustDelete.Name = "btnCustDelete";
-            this.btnCustDelete.Size = new System.Drawing.Size(104, 36);
+            this.btnCustDelete.Size = new System.Drawing.Size(138, 42);
             this.btnCustDelete.TabIndex = 17;
             this.btnCustDelete.Text = "Delete";
+            this.btnCustDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCustDelete.UseVisualStyleBackColor = true;
             this.btnCustDelete.Click += new System.EventHandler(this.btnCustDelete_Click);
             // 
@@ -258,12 +258,15 @@
             // 
             this.btnCustClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnCustClose.ForeColor = System.Drawing.Color.Red;
-            this.btnCustClose.Location = new System.Drawing.Point(451, 504);
+            this.btnCustClose.Image = ((System.Drawing.Image)(resources.GetObject("btnCustClose.Image")));
+            this.btnCustClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustClose.Location = new System.Drawing.Point(573, 504);
             this.btnCustClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCustClose.Name = "btnCustClose";
-            this.btnCustClose.Size = new System.Drawing.Size(104, 36);
+            this.btnCustClose.Size = new System.Drawing.Size(138, 42);
             this.btnCustClose.TabIndex = 18;
             this.btnCustClose.Text = "Close";
+            this.btnCustClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCustClose.UseVisualStyleBackColor = true;
             this.btnCustClose.Click += new System.EventHandler(this.btnCustClose_Click);
             // 
