@@ -11,13 +11,19 @@ namespace BusinessLayer
 {
     public class BLCustomer
     {
+        private readonly ApplicationDBContext _context;
+
+        public BLCustomer()
+        {
+            this._context = new ApplicationDBContext();
+        }
+
         //Insert
         public string CustomerInsert(Customer customer)
         {
-            using (var context = new ApplicationDBContext())
-            {
-                context.Customers.Add(customer);
-                int result = context.SaveChanges();
+            
+                _context.Customers.Add(customer);
+                int result = _context.SaveChanges();
                 if(result > 0)
                 {
                     return "Inserted Successfully";
@@ -25,20 +31,18 @@ namespace BusinessLayer
                 else
                 {
                     return "Failed to Insert";
-                }
-            }
+                } 
         }
 
         //Update
         public string CustomerUpdate(Customer customer)
-        {
-            using (var context = new ApplicationDBContext())
-            {
-                context.Customers.Add(customer);
-                context.Entry(customer).State = EntityState.Modified;
-                context.Customers.Add(customer);
-                int result = context.SaveChanges();
-                if (result > 0)
+        { 
+                     _context.Customers.Add(customer);
+                     _context.Entry(customer).State = EntityState.Modified;
+                     int check = _context.SaveChanges();
+                     _context.Dispose();
+              
+                if (check > 0)
                 {
                     return "Updated";
                 }
@@ -46,16 +50,16 @@ namespace BusinessLayer
                 {
                     return "failed to Update";
                 }
-            }
+            
         }
 
         //Delete
         public string CustomerDelete(Customer customer)
         {
-            using (var context =  new ApplicationDBContext())
-            {
-                context.Entry(customer).State = EntityState.Deleted;
-                int result = context.SaveChanges();
+            _context.Customers.Add(customer);
+            _context.Entry(customer).State = EntityState.Deleted;
+            _context.Dispose();
+                int result = _context.SaveChanges();
                 if (result > 0)
                 {
                     return "Customer was Deleted";
@@ -64,7 +68,6 @@ namespace BusinessLayer
                 {
                     return "Failed for Delete Customer";
                 }
-            }
         }
     }
 }

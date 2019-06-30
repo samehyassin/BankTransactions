@@ -339,6 +339,7 @@
             // 
             // btnDbtSave
             // 
+            this.btnDbtSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDbtSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDbtSave.Location = new System.Drawing.Point(82, 504);
             this.btnDbtSave.Name = "btnDbtSave";
@@ -350,6 +351,7 @@
             // 
             // btnDbtUpdate
             // 
+            this.btnDbtUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDbtUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDbtUpdate.Location = new System.Drawing.Point(205, 504);
             this.btnDbtUpdate.Name = "btnDbtUpdate";
@@ -360,6 +362,7 @@
             // 
             // btnDbtDelete
             // 
+            this.btnDbtDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDbtDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDbtDelete.Location = new System.Drawing.Point(328, 504);
             this.btnDbtDelete.Name = "btnDbtDelete";
@@ -370,6 +373,7 @@
             // 
             // btnDbtClose
             // 
+            this.btnDbtClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDbtClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDbtClose.ForeColor = System.Drawing.Color.Red;
             this.btnDbtClose.Location = new System.Drawing.Point(451, 504);
@@ -428,6 +432,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(1124, 12);
             this.pictureBox3.Name = "pictureBox3";
@@ -439,6 +444,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(1078, 12);
             this.pictureBox4.Name = "pictureBox4";
