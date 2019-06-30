@@ -58,7 +58,7 @@ namespace BusinessLayer
         {
             _context.Customers.Add(customer);
             _context.Entry(customer).State = EntityState.Deleted;
-            _context.Dispose();
+            
                 int result = _context.SaveChanges();
                 if (result > 0)
                 {
@@ -68,6 +68,7 @@ namespace BusinessLayer
                 {
                     return "Failed for Delete Customer";
                 }
+            _context.Dispose();
         }
     }
 }

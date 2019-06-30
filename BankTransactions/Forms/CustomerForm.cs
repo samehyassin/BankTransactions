@@ -25,11 +25,15 @@ namespace BankTransactions.Forms
 
         private void frmCustomer_Load(object sender, EventArgs e)
         {
-
-
             FillCustGrid();
             this.dgvCustomer.Columns["CustId"].Visible = false;
-
+            dgvCustomer.Columns[0].Name = "CustId";
+            dgvCustomer.Columns[1].Name = "Customr Name";
+            dgvCustomer.Columns[2].Name = "Phone";
+            dgvCustomer.Columns[3].Name = "Mobile";
+            dgvCustomer.Columns[4].Name = "Email";
+            dgvCustomer.Columns[5].Name = "Address";
+            dgvCustomer.Columns[6].Name = "TaxFileNumber";
         }
 
         private void btnCustClose_Click(object sender, EventArgs e)
@@ -72,14 +76,6 @@ namespace BankTransactions.Forms
 
         private void btnCustEdit_Click(object sender, EventArgs e)
         {
-            dgvCustomer.Columns[0].Name = "CustId";
-            dgvCustomer.Columns[1].Name = "Customr Name";
-            dgvCustomer.Columns[2].Name = "Phone";
-            dgvCustomer.Columns[3].Name = "Mobile";
-            dgvCustomer.Columns[4].Name = "Email";
-            dgvCustomer.Columns[5].Name = "Address";
-            dgvCustomer.Columns[6].Name = "TaxFileNumber";
-
             bool TaxFile = Int32.TryParse(txtTaxFileNo.Text, out int TaxFileNum);
             var customer = new Customer()
             {
@@ -126,14 +122,23 @@ namespace BankTransactions.Forms
             var confirmDelete = MessageBox.Show("Are You Sure Want to Delete This Customer  ??", "Confirm Delete!!", MessageBoxButtons.YesNo);
             if (confirmDelete == DialogResult.Yes)
             {
-                //using (var context = new ApplicationDBContext())
-                //{
-                //    //using (var customer = new Customer())
-                //    //{
-
-                //    //};
-                //}
-                
+                bool TaxFile = Int32.TryParse(txtTaxFileNo.Text, out int TaxFileNum);
+                var customer = new Customer()
+                {
+                    CustId = custId,
+                    CustomerName = txtCustomerName.Text,
+                    Phone = txtPhone.Text,
+                    Mobile = txtMobile.Text,
+                    Email = txtEmail.Text,
+                    Address = txtAddress.Text,
+                    TaxFileNumber = TaxFileNum
+                };
+                MessageBox.Show(new BLCustomer().CustomerDelete(customer));
+                FillCustGrid();
+                Clear.ClearText(this);
+                btnCustSave.Enabled = true;
+                btnCustDelete.Enabled = false;
+                btnCustEdit.Enabled = false;
             }
         }
 
