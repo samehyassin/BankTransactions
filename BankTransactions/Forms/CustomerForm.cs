@@ -71,9 +71,10 @@ namespace BankTransactions.Forms
             MessageBox.Show(new BLCustomer().CustomerInsert(customer));
             FillCustGrid();
             Clear.ClearText(this);
-        } 
+        }
         #endregion
 
+        #region Update Customer
         private void btnCustEdit_Click(object sender, EventArgs e)
         {
             bool TaxFile = Int32.TryParse(txtTaxFileNo.Text, out int TaxFileNum);
@@ -87,15 +88,16 @@ namespace BankTransactions.Forms
                 Address = txtAddress.Text,
                 TaxFileNumber = TaxFileNum
             };
-           
+
             MessageBox.Show(new BLCustomer().CustomerUpdate(customer));
             FillCustGrid();
             Clear.ClearText(this);
             btnCustSave.Enabled = true;
             btnCustDelete.Enabled = false;
             btnCustEdit.Enabled = false;
-        }
-        
+        } 
+        #endregion
+
         #region Select from GridView
         private void dgvCustomer_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -117,6 +119,7 @@ namespace BankTransactions.Forms
         }
         #endregion
 
+        #region Delete Customer
         private void btnCustDelete_Click(object sender, EventArgs e)
         {
             var confirmDelete = MessageBox.Show("Are You Sure Want to Delete This Customer  ??", "Confirm Delete!!", MessageBoxButtons.YesNo);
@@ -140,7 +143,8 @@ namespace BankTransactions.Forms
                 btnCustDelete.Enabled = false;
                 btnCustEdit.Enabled = false;
             }
-        }
+        } 
+        #endregion
 
         private void dgvCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

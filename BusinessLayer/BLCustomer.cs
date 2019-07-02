@@ -66,7 +66,7 @@ namespace BusinessLayer
                 }
                 else
                 {
-                    return "Failed for Delete Customer";
+                    return "Failed to Delete Customer";
                 }
             _context.Dispose();
         }

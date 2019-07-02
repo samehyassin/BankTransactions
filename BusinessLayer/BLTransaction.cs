@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
+//
 using DAL;
 
 namespace BusinessLayer
 {
     public class BLTransaction
     {
+        private readonly ApplicationDBContext _context;
+
+        // Add Transaction
         public string TransInsert(Transaction transaction)
         {
             using (var context = new ApplicationDBContext())
@@ -19,11 +24,11 @@ namespace BusinessLayer
                     int result = context.SaveChanges();
                     if (result > 0)
                     {
-                        return "deposit added";
+                        return "Deposit Added";
                     }
                     else
                     {
-                        return "deposit failed";
+                        return "Deposit Failed";
                     }
                 }
                 else if(transaction.WithdrawalAmount > 0)
@@ -34,20 +39,55 @@ namespace BusinessLayer
 
                     if (result > 0)
                     {
-                        return "withdraw added";
+                        return "Withdraw Added";
                     }
                     else
                     {
-                        return "withdraw failed";
+                        return "Withdraw Failed";
                     }
                 }
                 else
                 {
-                    return "something wrong";
+                    return "There Is Something Wrong";
                 }
                 
             }
             
+        }
+
+        //Update
+        public string TransactionUpdate (Transaction transaction)
+        {
+            _context.Transactions.Add(transaction);
+            _context.Entry(transaction).State = EntityState.Modified;
+            int check = _context.SaveChanges();
+            _context.Dispose();
+
+            if (check > 0)
+            {
+                return "Updated";
+            }
+            else
+            {
+                return "Failed To Update";
+            }
+        }
+
+        //Delete
+        public string TransactionDelete(Transaction transaction)
+        {
+            _context.Transactions.Add(transaction);
+            _context.Entry(transaction).State = EntityState.Deleted;
+            int result = _context.SaveChanges();
+            if (result >0)
+            {
+                return "Transaction Was Deleted";
+            }
+            else
+            {
+                return "Failed to Delete Transaction";
+            }
+            _context.Dispose();
         }
     }
 }
