@@ -43,7 +43,11 @@
             this.btnEmpEdit = new System.Windows.Forms.Button();
             this.btnEmpSave = new System.Windows.Forms.Button();
             this.picbxEmpClose = new System.Windows.Forms.PictureBox();
+            this.dgvEmp = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picbxEmpClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +55,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(157, 22);
+            this.label1.Location = new System.Drawing.Point(285, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(278, 38);
             this.label1.TabIndex = 0;
@@ -138,7 +142,7 @@
             this.btnEmpClose.ForeColor = System.Drawing.Color.Red;
             this.btnEmpClose.Image = ((System.Drawing.Image)(resources.GetObject("btnEmpClose.Image")));
             this.btnEmpClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpClose.Location = new System.Drawing.Point(417, 271);
+            this.btnEmpClose.Location = new System.Drawing.Point(499, 269);
             this.btnEmpClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEmpClose.Name = "btnEmpClose";
             this.btnEmpClose.Size = new System.Drawing.Size(112, 42);
@@ -146,13 +150,14 @@
             this.btnEmpClose.Text = "Close";
             this.btnEmpClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEmpClose.UseVisualStyleBackColor = true;
+            this.btnEmpClose.Click += new System.EventHandler(this.btnEmpClose_Click);
             // 
             // btnEmpDelete
             // 
             this.btnEmpDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
             this.btnEmpDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnEmpDelete.Image")));
             this.btnEmpDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpDelete.Location = new System.Drawing.Point(275, 271);
+            this.btnEmpDelete.Location = new System.Drawing.Point(357, 269);
             this.btnEmpDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEmpDelete.Name = "btnEmpDelete";
             this.btnEmpDelete.Size = new System.Drawing.Size(112, 42);
@@ -166,7 +171,7 @@
             this.btnEmpEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
             this.btnEmpEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEmpEdit.Image")));
             this.btnEmpEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpEdit.Location = new System.Drawing.Point(144, 271);
+            this.btnEmpEdit.Location = new System.Drawing.Point(226, 269);
             this.btnEmpEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEmpEdit.Name = "btnEmpEdit";
             this.btnEmpEdit.Size = new System.Drawing.Size(112, 42);
@@ -180,7 +185,7 @@
             this.btnEmpSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
             this.btnEmpSave.Image = ((System.Drawing.Image)(resources.GetObject("btnEmpSave.Image")));
             this.btnEmpSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpSave.Location = new System.Drawing.Point(12, 271);
+            this.btnEmpSave.Location = new System.Drawing.Point(94, 269);
             this.btnEmpSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEmpSave.Name = "btnEmpSave";
             this.btnEmpSave.Size = new System.Drawing.Size(112, 42);
@@ -188,22 +193,45 @@
             this.btnEmpSave.Text = "Save";
             this.btnEmpSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEmpSave.UseVisualStyleBackColor = true;
+            this.btnEmpSave.Click += new System.EventHandler(this.btnEmpSave_Click);
             // 
             // picbxEmpClose
             // 
             this.picbxEmpClose.Image = ((System.Drawing.Image)(resources.GetObject("picbxEmpClose.Image")));
-            this.picbxEmpClose.Location = new System.Drawing.Point(547, 12);
+            this.picbxEmpClose.Location = new System.Drawing.Point(808, 12);
             this.picbxEmpClose.Name = "picbxEmpClose";
             this.picbxEmpClose.Size = new System.Drawing.Size(30, 30);
             this.picbxEmpClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picbxEmpClose.TabIndex = 23;
             this.picbxEmpClose.TabStop = false;
+            this.picbxEmpClose.Click += new System.EventHandler(this.picbxEmpClose_Click);
+            // 
+            // dgvEmp
+            // 
+            this.dgvEmp.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dgvEmp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmp.Location = new System.Drawing.Point(417, 83);
+            this.dgvEmp.Name = "dgvEmp";
+            this.dgvEmp.Size = new System.Drawing.Size(395, 169);
+            this.dgvEmp.TabIndex = 24;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(226, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
             // 
             // frmEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 341);
+            this.ClientSize = new System.Drawing.Size(850, 341);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.dgvEmp);
             this.Controls.Add(this.picbxEmpClose);
             this.Controls.Add(this.btnEmpClose);
             this.Controls.Add(this.btnEmpDelete);
@@ -222,7 +250,10 @@
             this.Name = "frmEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employees Form";
+            this.Load += new System.EventHandler(this.frmEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picbxEmpClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +275,7 @@
         private System.Windows.Forms.Button btnEmpEdit;
         private System.Windows.Forms.Button btnEmpSave;
         private System.Windows.Forms.PictureBox picbxEmpClose;
+        private System.Windows.Forms.DataGridView dgvEmp;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

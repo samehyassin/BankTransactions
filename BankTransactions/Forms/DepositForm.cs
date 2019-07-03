@@ -96,7 +96,6 @@ namespace BankTransactions.Forms
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
             frmCustomer custfrom = new frmCustomer();
             custfrom.ShowDialog();
         }
@@ -115,6 +114,14 @@ namespace BankTransactions.Forms
         {
             string x = cbxEmployeeName.SelectedText;
             int y = Convert.ToInt16(cbxEmployeeName.SelectedValue);
+        }
+
+        private void picbxAddEmp_Click(object sender, EventArgs e)
+        {
+            frmEmployee empfrm = new frmEmployee();
+            empfrm.ShowDialog();
+            //frmDeposit frmdepo = new frmDeposit();
+            //frmdepo.Hide();
         }
     }
 }
