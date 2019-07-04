@@ -34,9 +34,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtEmpName = new System.Windows.Forms.TextBox();
+            this.txtEmpTitle = new System.Windows.Forms.TextBox();
+            this.txtEmpMobile = new System.Windows.Forms.TextBox();
             this.chbIsActive = new System.Windows.Forms.CheckBox();
             this.btnEmpClose = new System.Windows.Forms.Button();
             this.btnEmpDelete = new System.Windows.Forms.Button();
@@ -101,29 +101,29 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Is Active";
             // 
-            // textBox1
+            // txtEmpName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(174, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 30);
-            this.textBox1.TabIndex = 5;
+            this.txtEmpName.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpName.Location = new System.Drawing.Point(174, 103);
+            this.txtEmpName.Name = "txtEmpName";
+            this.txtEmpName.Size = new System.Drawing.Size(195, 30);
+            this.txtEmpName.TabIndex = 5;
             // 
-            // textBox2
+            // txtEmpTitle
             // 
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(174, 142);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(195, 30);
-            this.textBox2.TabIndex = 6;
+            this.txtEmpTitle.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpTitle.Location = new System.Drawing.Point(174, 142);
+            this.txtEmpTitle.Name = "txtEmpTitle";
+            this.txtEmpTitle.Size = new System.Drawing.Size(195, 30);
+            this.txtEmpTitle.TabIndex = 6;
             // 
-            // textBox3
+            // txtEmpMobile
             // 
-            this.textBox3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(174, 184);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(195, 30);
-            this.textBox3.TabIndex = 7;
+            this.txtEmpMobile.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpMobile.Location = new System.Drawing.Point(174, 184);
+            this.txtEmpMobile.Name = "txtEmpMobile";
+            this.txtEmpMobile.Size = new System.Drawing.Size(195, 30);
+            this.txtEmpMobile.TabIndex = 7;
             // 
             // chbIsActive
             // 
@@ -165,6 +165,7 @@
             this.btnEmpDelete.Text = "Delete";
             this.btnEmpDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEmpDelete.UseVisualStyleBackColor = true;
+            this.btnEmpDelete.Click += new System.EventHandler(this.btnEmpDelete_Click);
             // 
             // btnEmpEdit
             // 
@@ -179,6 +180,7 @@
             this.btnEmpEdit.Text = "Edit";
             this.btnEmpEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEmpEdit.UseVisualStyleBackColor = true;
+            this.btnEmpEdit.Click += new System.EventHandler(this.btnEmpEdit_Click);
             // 
             // btnEmpSave
             // 
@@ -214,6 +216,7 @@
             this.dgvEmp.Name = "dgvEmp";
             this.dgvEmp.Size = new System.Drawing.Size(395, 169);
             this.dgvEmp.TabIndex = 24;
+            this.dgvEmp.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmp_CellDoubleClick);
             // 
             // pictureBox1
             // 
@@ -238,9 +241,9 @@
             this.Controls.Add(this.btnEmpEdit);
             this.Controls.Add(this.btnEmpSave);
             this.Controls.Add(this.chbIsActive);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEmpMobile);
+            this.Controls.Add(this.txtEmpTitle);
+            this.Controls.Add(this.txtEmpName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -266,9 +269,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtEmpName;
+        private System.Windows.Forms.TextBox txtEmpTitle;
+        private System.Windows.Forms.TextBox txtEmpMobile;
         private System.Windows.Forms.CheckBox chbIsActive;
         private System.Windows.Forms.Button btnEmpClose;
         private System.Windows.Forms.Button btnEmpDelete;

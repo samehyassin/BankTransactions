@@ -42,7 +42,7 @@ namespace BankTransactions.Forms
                 var employees = context.Employees.ToList();
 
                 cbxEmployeeName.DataSource = employees;
-                cbxEmployeeName.DisplayMember = "Name";
+                cbxEmployeeName.DisplayMember = "EmployeeName";
                 cbxEmployeeName.ValueMember = "EmpId";
             }
         } 
@@ -120,8 +120,6 @@ namespace BankTransactions.Forms
         {
             frmEmployee empfrm = new frmEmployee();
             empfrm.ShowDialog();
-            //frmDeposit frmdepo = new frmDeposit();
-            //frmdepo.Hide();
         }
     }
 }

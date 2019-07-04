@@ -15,12 +15,12 @@ namespace DAL
         public int EmpId { get; set; }
 
         [MaxLength(100)]
-        public string Name { get; set; }
+        public string EmpName { get; set; }
 
         [MaxLength(50)]
-        public string Title { get; set; }
+        public string EmpTitle { get; set; }
 
-        public int Mobile { get; set; }
+        public int EmpMobile { get; set; }
 
         [MaxLength(1)]
         public string IsActive { get; set; }

@@ -65,6 +65,10 @@
     <Compile Include="Migrations\201906142213491_WithdrawalNoteColumn.Designer.cs">
       <DependentUpon>201906142213491_WithdrawalNoteColumn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907032132294_ModifyingPropName.cs" />
+    <Compile Include="Migrations\201907032132294_ModifyingPropName.Designer.cs">
+      <DependentUpon>201907032132294_ModifyingPropName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Transaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906142213491_WithdrawalNoteColumn.resx">
       <DependentUpon>201906142213491_WithdrawalNoteColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907032132294_ModifyingPropName.resx">
+      <DependentUpon>201907032132294_ModifyingPropName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

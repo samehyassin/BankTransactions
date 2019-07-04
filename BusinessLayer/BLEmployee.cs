@@ -9,7 +9,7 @@ using DAL;
 
 namespace BusinessLayer
 {
-    class BLEmployee
+    public class BLEmployee
     {
         private readonly ApplicationDBContext _context;
         public BLEmployee()
