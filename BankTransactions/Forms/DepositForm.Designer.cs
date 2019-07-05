@@ -67,6 +67,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.picbxAddEmp = new System.Windows.Forms.PictureBox();
+            this.btnTransactions = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -343,11 +344,14 @@
             // 
             this.btnDbtSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDbtSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDbtSave.Image = ((System.Drawing.Image)(resources.GetObject("btnDbtSave.Image")));
+            this.btnDbtSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDbtSave.Location = new System.Drawing.Point(82, 504);
             this.btnDbtSave.Name = "btnDbtSave";
             this.btnDbtSave.Size = new System.Drawing.Size(115, 36);
             this.btnDbtSave.TabIndex = 29;
             this.btnDbtSave.Text = "Save";
+            this.btnDbtSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDbtSave.UseVisualStyleBackColor = true;
             this.btnDbtSave.Click += new System.EventHandler(this.btnDbtSave_Click);
             // 
@@ -355,22 +359,28 @@
             // 
             this.btnDbtUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDbtUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDbtUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnDbtUpdate.Image")));
+            this.btnDbtUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDbtUpdate.Location = new System.Drawing.Point(205, 504);
             this.btnDbtUpdate.Name = "btnDbtUpdate";
             this.btnDbtUpdate.Size = new System.Drawing.Size(115, 36);
             this.btnDbtUpdate.TabIndex = 30;
             this.btnDbtUpdate.Text = "Update";
+            this.btnDbtUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDbtUpdate.UseVisualStyleBackColor = true;
             // 
             // btnDbtDelete
             // 
             this.btnDbtDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDbtDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDbtDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDbtDelete.Image")));
+            this.btnDbtDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDbtDelete.Location = new System.Drawing.Point(328, 504);
             this.btnDbtDelete.Name = "btnDbtDelete";
             this.btnDbtDelete.Size = new System.Drawing.Size(115, 36);
             this.btnDbtDelete.TabIndex = 31;
             this.btnDbtDelete.Text = "Delete";
+            this.btnDbtDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDbtDelete.UseVisualStyleBackColor = true;
             // 
             // btnDbtClose
@@ -378,11 +388,14 @@
             this.btnDbtClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDbtClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDbtClose.ForeColor = System.Drawing.Color.Red;
+            this.btnDbtClose.Image = global::BankTransactions.Properties.Resources.icons8_close_sign_32;
+            this.btnDbtClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDbtClose.Location = new System.Drawing.Point(451, 504);
             this.btnDbtClose.Name = "btnDbtClose";
             this.btnDbtClose.Size = new System.Drawing.Size(115, 36);
             this.btnDbtClose.TabIndex = 32;
             this.btnDbtClose.Text = "Close";
+            this.btnDbtClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDbtClose.UseVisualStyleBackColor = true;
             this.btnDbtClose.Click += new System.EventHandler(this.btnDbtClose_Click);
             // 
@@ -467,12 +480,23 @@
             this.picbxAddEmp.TabStop = false;
             this.picbxAddEmp.Click += new System.EventHandler(this.picbxAddEmp_Click);
             // 
+            // btnTransactions
+            // 
+            this.btnTransactions.Location = new System.Drawing.Point(754, 579);
+            this.btnTransactions.Name = "btnTransactions";
+            this.btnTransactions.Size = new System.Drawing.Size(110, 33);
+            this.btnTransactions.TabIndex = 41;
+            this.btnTransactions.Text = "Transaction";
+            this.btnTransactions.UseVisualStyleBackColor = true;
+            this.btnTransactions.Click += new System.EventHandler(this.btnTransactions_Click);
+            // 
             // frmDeposit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1176, 624);
             this.ControlBox = false;
+            this.Controls.Add(this.btnTransactions);
             this.Controls.Add(this.picbxAddEmp);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -568,5 +592,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox picbxAddEmp;
+        private System.Windows.Forms.Button btnTransactions;
     }
 }

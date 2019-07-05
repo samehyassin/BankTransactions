@@ -48,7 +48,7 @@ namespace BankTransactions.Forms
         //Close Form
         private void picbxEmpClose_Click(object sender, EventArgs e)
         {
-            frmEmployee.ActiveForm.Close();       
+            frmEmployee.ActiveForm.Close();
         }
         
         //Insert Employee
