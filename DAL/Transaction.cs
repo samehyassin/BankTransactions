@@ -14,9 +14,8 @@ namespace DAL
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int TransId { get; set; } 
 
-        [Required]
         [DataType(DataType.Date)]
-        public DateTime DepositDate { get; set; }
+        public DateTime? DepositDate { get; set; }
 
         public int InvoiceNumber { get; set; }
         [Required]
@@ -35,9 +34,8 @@ namespace DAL
 
         public int RefNumber { get; set; }
 
-        [Required]
         [DataType(DataType.Date)]
-        public DateTime WithdrawalDate { get; set; }
+        public DateTime? WithdrawalDate { get; set; }
 
         public decimal WithdrawalAmount { get; set; }
 

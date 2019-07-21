@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 //
-using BankTransactions;
+using BusinessLayer;
 using DAL;
+using ClearTextbox;
 
 namespace BankTransactions.Forms
 {
@@ -24,8 +25,8 @@ namespace BankTransactions.Forms
 
         private void frmDeposit_Load(object sender, EventArgs e)
         {
-            PaymentMethodCbx();
-            CusterNamecbx();
+            PaymentMethodcbx();
+            CustomerNamecbx();
             EmployeeNamecbx();
         }
 
@@ -49,11 +50,12 @@ namespace BankTransactions.Forms
         #endregion
 
         #region Customer Name Method 
-        public void CusterNamecbx()
+        public void CustomerNamecbx()
         {
             using (var context = new ApplicationDBContext())
             {
                 var customers = context.Customers.ToList();
+
                 cbxCustomerName.DataSource = customers;
                 cbxCustomerName.DisplayMember = "CustomerName";
                 cbxCustomerName.ValueMember = "CustId";
@@ -62,7 +64,7 @@ namespace BankTransactions.Forms
         #endregion
 
         #region Payment Method Combobox
-        public void PaymentMethodCbx()
+        public void PaymentMethodcbx()
         {
             using (var context = new ApplicationContext())
             {
@@ -74,24 +76,46 @@ namespace BankTransactions.Forms
         
         private void btnDbtSave_Click(object sender, EventArgs e)
         {
-            //using (var context = new ApplicationDBContext())
-            //{
-            //      var trans = new Transaction()
-            //      {
-            //        DepositDate = dtpDepositDate.Value,
-            //        InvoiceNumber = Convert.ToInt32(txtInvoiceNumber.Text),
-            //        InvoiceAmount = Convert.ToDecimal(txtInvoiceNumber.Text),
-            //        AmountAdded = Convert.ToDecimal(txtAmountAdded.Text),
-            //        SalesReceiptNumber = Convert.ToInt32(txtSalesReceiptno.Text),
-            //        PaymentMethod = cbxPaymentMethod.Text,
-            //        CheckNumber = Convert.ToInt32(txtCheckNumber.Text),
-            //        RefNumber = Convert.ToInt32(txtRefNumber.Text),
-            //        EmpId = Convert.ToInt32(cbxEmployeeName.SelectedValue),
-            //        CustId = Convert.ToInt32(cbxCustomerName.SelectedValue)
-            //      };
-            //    context.Transactions.Add(trans);
-            //    context.SaveChanges();
-            //}
+            using (var context = new ApplicationDBContext())
+            {
+                bool InvoiceNumber = Int32.TryParse(txtInvoiceNumber.Text, out int InvoiceNum);
+                bool SalesReciptNumber = Int32.TryParse(txtSalesReceiptno.Text, out int SalesRecipNum);
+                bool CheckNumber = Int32.TryParse(txtCheckNumber.Text, out int CheckNum);
+                bool RefNumber = Int32.TryParse(txtRefNumber.Text, out int RefNum);
+                bool InvoiceAmount = decimal.TryParse(txtInvoiceAmount.Text, out decimal InvAmount);
+                bool AmountAdded = decimal.TryParse(txtAmountAdded.Text, out decimal AmAdded);
+                var trans = new Transaction()
+                {
+                    DepositDate = dtpDepositDate.Value,
+
+                    //InvoiceNumber = Convert.ToInt32(txtInvoiceNumber.Text),
+                    InvoiceNumber = InvoiceNum,
+
+                    //InvoiceAmount = Convert.ToDecimal(txtInvoiceNumber.Text),
+                    InvoiceAmount = InvAmount,
+
+                    //AmountAdded = Convert.ToDecimal(txtAmountAdded.Text),
+                    AmountAdded = AmAdded,
+
+                    //SalesReceiptNumber = Convert.ToInt32(txtSalesReceiptno.Text),
+                    SalesReceiptNumber = SalesRecipNum,
+
+                    PaymentMethod = cbxPaymentMethod.ValueMember,
+                    //CheckNumber = Convert.ToInt32(txtCheckNumber.Text),
+                    CheckNumber = CheckNum,
+
+                    //RefNumber = Convert.ToInt32(txtRefNumber.Text),
+                    RefNumber = RefNum,
+
+                    EmpId = Convert.ToInt32(cbxEmployeeName.SelectedValue),
+                    CustId = Convert.ToInt32(cbxCustomerName.SelectedValue)
+                };
+                MessageBox.Show(new BLTransaction().TransactionInsert(trans));
+                Clear.ClearText(this);
+                btnDbtSave.Enabled = true;
+                btnDbtUpdate.Enabled = false;
+                btnDbtDelete.Enabled = false;
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

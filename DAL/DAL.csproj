@@ -69,6 +69,18 @@
     <Compile Include="Migrations\201907032132294_ModifyingPropName.Designer.cs">
       <DependentUpon>201907032132294_ModifyingPropName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907211827210_edit datedeposit type.cs" />
+    <Compile Include="Migrations\201907211827210_edit datedeposit type.Designer.cs">
+      <DependentUpon>201907211827210_edit datedeposit type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907211836199_unrequired dates in transaction.cs" />
+    <Compile Include="Migrations\201907211836199_unrequired dates in transaction.Designer.cs">
+      <DependentUpon>201907211836199_unrequired dates in transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907211838257_make dates nullabe in transcation.cs" />
+    <Compile Include="Migrations\201907211838257_make dates nullabe in transcation.Designer.cs">
+      <DependentUpon>201907211838257_make dates nullabe in transcation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Transaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,6 +101,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907032132294_ModifyingPropName.resx">
       <DependentUpon>201907032132294_ModifyingPropName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907211827210_edit datedeposit type.resx">
+      <DependentUpon>201907211827210_edit datedeposit type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907211836199_unrequired dates in transaction.resx">
+      <DependentUpon>201907211836199_unrequired dates in transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907211838257_make dates nullabe in transcation.resx">
+      <DependentUpon>201907211838257_make dates nullabe in transcation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

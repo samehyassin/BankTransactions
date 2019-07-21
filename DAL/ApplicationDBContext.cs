@@ -26,6 +26,7 @@ namespace DAL
             modelBuilder.Entity<Transaction>().Property(p => p.AmountAdded).HasPrecision(9, 2);
             modelBuilder.Entity<Transaction>().Property(e => e.SalesRecieptAmount).HasPrecision(9, 2);
             modelBuilder.Entity<Transaction>().Property(m => m.WithdrawalAmount).HasPrecision(9, 2);
+            //modelBuilder.Entity<Transaction>().Property(d => d.DepositDate).HasColumnType("datetime");
   
             base.OnModelCreating(modelBuilder);
         }

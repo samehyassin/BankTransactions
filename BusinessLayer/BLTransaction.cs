@@ -12,16 +12,18 @@ namespace BusinessLayer
     public class BLTransaction
     {
         private readonly ApplicationDBContext _context;
+        public BLTransaction()
+        {
+            this._context = new ApplicationDBContext();
+        }
 
         // Add Transaction
-        public string TransInsert(Transaction transaction)
+        public string TransactionInsert(Transaction transaction)
         {
-            using (var context = new ApplicationDBContext())
-            {
                 if (transaction.AmountAdded > 0)
                 {
-                    context.Transactions.Add(transaction);
-                    int result = context.SaveChanges();
+                    _context.Transactions.Add(transaction);
+                    int result = _context.SaveChanges();
                     if (result > 0)
                     {
                         return "Deposit Added";
@@ -34,8 +36,8 @@ namespace BusinessLayer
                 else if(transaction.WithdrawalAmount > 0)
                 {
                     transaction.WithdrawalAmount *= -1;
-                    context.Transactions.Add(transaction);
-                    int result = context.SaveChanges();
+                    _context.Transactions.Add(transaction);
+                    int result = _context.SaveChanges();
 
                     if (result > 0)
                     {
@@ -50,9 +52,7 @@ namespace BusinessLayer
                 {
                     return "There Is Something Wrong";
                 }
-                
-            }
-            
+     
         }
 
         //Update
